@@ -18,6 +18,18 @@
 	alert("this is your name encoded:")
 	alert(cyphertext)
     }
+
+  function Randomizer(){
+        import random
+        var list = [];
+        var text = prompt("Enter the Name of a Place (Enter STOP to stop entering names)", "input name");
+        list.append(text);
+        while text =! "STOP" {
+          text = promt("Enter the Name of a Place (Enter STOP to stop entering name)", "input name");
+          list.append(text);
+        }
+        alert("The place chosen by the randomizer is:" + random.choice(list))
+      }
   
   function goBack() {
     window.history.back();
@@ -27,6 +39,7 @@
    <body>
 	<button onclick='Count()'>Start Counting!</button>
 	<button onclick='CaesarCipher()'>Caesar cipher</button>
+	<button onClick='Randomizer()'>Randomizer</button>
     <button onclick='goBack()'>Go Back</button>
     
    </body>
