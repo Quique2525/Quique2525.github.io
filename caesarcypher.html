@@ -9,7 +9,7 @@
 		}
 	}
 	function CaesarCipher(){
-		var text = prompt("Please enter your name", "input name");
+		var text = prompt("Please enter the text you would like to encrypt", "input text");
 		var cyphertext = " ";
 		for (x in text) { 
         cyphertext = cyphertext + String.fromCharCode(text.charCodeAt(x) + 2)
@@ -18,6 +18,15 @@
 	alert("this is your name encoded:")
 	alert(cyphertext)
     }
+	function CaesarCipherdecrypt(){
+		var text = prompt("Please enter the text you would like to decrypt", "input text");
+		var decrypttext = " ";
+		for (x in text) {
+			decrypttext = decrypttext + String.fromCharCode(text.charCode(x) - 2)
+		}
+		alert("This is your decrypted message:")
+		alert(decrypttext)
+	}
 
   
   function goBack() {
@@ -27,7 +36,8 @@
    </head>
    <body>
 	<button onclick='Count()'>Start Counting!</button>
-	<button onclick='CaesarCipher()'>Caesar cipher</button>
+	<button onclick='CaesarCipher()'>Caesar Cipher</button>
+	   <button onclick='CaesarCipherdecrypt()'>Caesar Cipher Decryption</button>
 	
     <button onclick='goBack()'>Go Back</button>
     
