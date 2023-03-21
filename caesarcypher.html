@@ -9,20 +9,20 @@
 		}
 	}
 	function CaesarCipher(){
-		var text = prompt("Please enter the text you would like to encrypt", "input text");
+		var text = prompt("Please enter the message you would like to encrypt", "input text");
 		var cyphertext = " ";
 		for (x in text) { 
         cyphertext = cyphertext + String.fromCharCode(text.charCodeAt(x) + 2)
 	}
 
-	alert("this is your name encoded:")
+	alert("this is your encoded message:")
 	alert(cyphertext)
     }
 	function CaesarCipherdecrypt(){
 		var text = prompt("Please enter the text you would like to decrypt", "input text");
 		var decrypttext = " ";
 		for (x in text) {
-			decrypttext = decrypttext + String.fromCharCode(text.charCode(x) - 2)
+			decrypttext = decrypttext + String.fromCharCode(text.charCodeAt(x) - 2)
 		}
 		alert("This is your decrypted message:")
 		alert(decrypttext)
